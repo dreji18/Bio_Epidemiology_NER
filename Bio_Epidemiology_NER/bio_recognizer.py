@@ -54,7 +54,7 @@ def ner_prediction(corpus, compute):
 
         tokenized_sentence = word_tokenize(sentence)
         
-        actuall_values_list = []
+        actual_values_list = []
         for i in range(len(pred_df)):
             pred_text = sentence[pred_df['start'].iloc[i]: pred_df['end'].iloc[i]]
             try:       
@@ -70,10 +70,10 @@ def ner_prediction(corpus, compute):
                 actual_word = pred_text
                 continue
             
-            actuall_values_list.append(actual_word)
+            actual_values_list.append(actual_word)
             
 
-        pred_df['value'] = actuall_values_list
+        pred_df['value'] = actual_values_list
         
         # checking whether any diseases are missed with disease list
         disease_extraction = []
